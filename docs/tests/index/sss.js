@@ -27,8 +27,8 @@
 
   cases.forEach(function(c){
     const n = c[0]
-    const e = c[1]
-    const i = c[2]
+    const i = c[1]
+    const e = c[2]
     const a = sss(i[0], i[1])
     const ok = e === a
     n2i(n).checked = ok
