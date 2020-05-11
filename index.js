@@ -33,7 +33,13 @@ e.s2p = function(s){ return e.c2p(e.s2c(s)).map(e.p2s) }
 e.s2m = function(s){
   const c = e.s2c(s)
   const p = e.c2p(c)
-  return new Map(p)
+  const m = new Map()
+  p.forEach(function(kv){
+    const k = kv[0]
+    const v = kv[1]
+    m.set(k,v)
+  })
+  return m
 }
 
 })
