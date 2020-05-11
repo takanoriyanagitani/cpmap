@@ -1,6 +1,6 @@
 {
   "name": "cpmap",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "map creation from character pairs",
   "main": "index.js",
   "scripts": {
