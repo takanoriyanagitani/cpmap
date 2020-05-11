@@ -2,7 +2,7 @@
 map creation from character pairs
 
 [![IE11 CI](https://github.com/takanoriyanagitani/cpmap/workflows/IE11%20CI/badge.svg)](https://github.com/takanoriyanagitani/cpmap/actions?query=workflow%3A%22IE11+CI%22)
-![Chrome/Node.js CI](https://github.com/takanoriyanagitani/cpmap/workflows/Chrome/Node.js%20CI/badge.svg)
+[![Chrome/Node.js CI](https://github.com/takanoriyanagitani/cpmap/workflows/Chrome/Node.js%20CI/badge.svg)](https://github.com/takanoriyanagitani/cpmap/actions?query=workflow%3A%22Chrome%2FNode.js+CI%22)
 
 * s2m: decoder (String -> Map)
 * m2s: encoder (Map    -> String)
