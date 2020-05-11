@@ -5,7 +5,7 @@
 
   const li = tests.getElementsByTagName("li")
 
-  const n2i = function(n){ return li.getElementsByName(n)[0] }
+  const n2i = function(n){ return document.getElementsByName(n)[0] }
 
   const cases = [
     ["empty", "",     []],
@@ -37,6 +37,6 @@
     state.ng += ok ? 0 : 1
   })
 
-  document.title = JSON.stringify(state)
+  document.title = state.Total === state.OK ? "OK" : "NG"
 
 })(window.CharPairs2Map)
