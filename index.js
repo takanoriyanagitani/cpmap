@@ -18,4 +18,14 @@
 
 e.s2c = function(s=""){ return s.split("") }
 
+e.c2p = function(c=[]){
+  const ret = []
+  const len = c.length
+  const hlf = len >> 1
+  for(let i=0; i<hlf; i++) ret.push([c[i*2], c[i*2+1]])
+  return ret
+}
+
+e.p2s = function(p=[]){ return p[0] + p[1] }
+
 })
