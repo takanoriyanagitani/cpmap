@@ -7,10 +7,16 @@
 
   const n2i = function(n){ return document.getElementsByName(n)[0] }
 
+  const create_map = function(kvpairs){
+    const m = new Map()
+    kvpairs.forEach(function(kv){ m.set(kv[0], kv[1]) })
+    return m
+  }
+
   const cases = [
-    ["empty", "",     new Map()],
-    ["pair1", "i1",   new Map([["i","1"]])],
-    ["pair2", "v5i1", new Map([["v","5"], ["i","1"]])],
+    ["empty", "",     create_map([])],
+    ["pair1", "i1",   create_map([["i","1"]])],
+    ["pair2", "v5i1", create_map([["v","5"], ["i","1"]])],
   ]
 
   const mcmp = function(a,b){
