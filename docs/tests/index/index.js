@@ -30,4 +30,10 @@ e.p2s = function(p=[]){ return p[0] + p[1] }
 
 e.s2p = function(s=""){ return e.c2p(e.s2c(s)).map(e.p2s) }
 
+e.s2m = function(s=""){
+  const c = e.s2c(s)
+  const p = e.c2p(c)
+  return new Map(p)
+}
+
 })

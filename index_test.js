@@ -1,6 +1,7 @@
 const {
   s2c, c2p, p2s,
   s2p,
+  s2m,
 } = require("./index")
 
 describe("node", () => {
@@ -32,6 +33,14 @@ describe("str2pairs", () => {
   test("empty", () => expect(s2p("")).toStrictEqual([]))
   test("pair1", () => expect(s2p("c4")).toStrictEqual(["c4"]))
   test("pair2", () => expect(s2p("r2d2")).toStrictEqual(["r2", "d2"]))
+
+})
+
+describe("str2map", () => {
+
+  test("empty", () => expect(s2m("")).toStrictEqual(new Map()))
+  test("pair1", () => expect(s2m("v5")).toStrictEqual(new Map([["v","5"]])))
+  test("pair2", () => expect(s2m("i1v5")).toStrictEqual(new Map([["i","1"], ["v","5"]])))
 
 })
 
