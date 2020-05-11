@@ -14,4 +14,4 @@ map creation from character pairs
 |:---------|:------|:-------|
 | s2m      | v5i1  | Map({'v'=>'5', 'i'=>'1'}) |
 | m2s      | Map({"3"=>"8", "0"=>"1"}) | 3801 |
-| sss      | i2,i1 | i1 |
+| s2s      | i2,i1 | i1 |
