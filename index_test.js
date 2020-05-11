@@ -1,7 +1,7 @@
 const {
   s2c, c2p, p2s, s2p, s2m,
   m2p, m2s,
-  usm,
+  usm, sms, sss,
 } = require("./index")
 
 describe("node", () => {
@@ -67,6 +67,30 @@ describe("update map(string, map)", () => {
   test("s0m1",  () => expect(usm("", new Map([["v","5"]]))).toStrictEqual(new Map([["v","5"]])))
   test("s1m1",  () => expect(usm("v6", new Map([["v","5"]]))).toStrictEqual(new Map([["v","5"]])))
   test("pair2", () => expect(usm("v6i1", new Map([["v","5"]]))).toStrictEqual(new Map([["v","5"], ["i","1"]])))
+
+})
+
+describe("get updated map(as string)", () => {
+
+  test("empty", () => expect(sms("",   new Map())).toBe(""))
+  test("s1m0",  () => expect(sms("v5", new Map())).toBe("v5"))
+  test("s0m1",  () => expect(sms("",   new Map([["i","1"]]))).toBe("i1"))
+  test("s1m1",  () => expect(sms("v6", new Map([["v","5"]]))).toBe("v5"))
+  test("s2m1", () => expect(sms("i2v5", new Map([["i","1"]]))).toBe("i1v5"))
+  test("s2m2", () => expect(sms("v6i2", new Map([["i","1"], ["v","5"]]))).toBe("v5i1"))
+  test("s+m",  () => expect(sms("v5", new Map([["i","1"]]))).toBe("v5i1"))
+  test("m+s",  () => expect(sms("i1", new Map([["v","5"]]))).toBe("i1v5"))
+
+})
+
+describe("get updated map(string,string -> string)", () => {
+
+  test("empty", () => expect(sss("","")).toBe(""))
+  test("new1",  () => expect(sss("","v5")).toBe("v5"))
+  test("upd1",  () => expect(sss("v6","v5")).toBe("v5"))
+  test("u1n1",  () => expect(sss("v6","v5i1")).toBe("v5i1"))
+  test("n1u1",  () => expect(sss("i2","v5i1")).toBe("i1v5"))
+  test("u0n1",  () => expect(sss("v5","i1")).toBe("v5i1"))
 
 })
 

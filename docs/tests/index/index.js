@@ -67,4 +67,9 @@ e.sms = function(s,m){
   return e.m2s(updated)
 }
 
+e.sss = function(a,b){
+  const m = e.usm(a, e.s2m(b))
+  return e.m2s(m)
+}
+
 })
