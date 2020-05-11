@@ -33,8 +33,8 @@
     const a = s2c(i)
     const ok = acmp(e,a)
     n2i(n).checked = ok
-    state.ok += ok ? 1 : 0
-    state.ng += ok ? 0 : 1
+    state.OK += ok ? 1 : 0
+    state.NG += ok ? 0 : 1
   })
 
   document.title = state.Total === state.OK ? "OK" : "NG"
