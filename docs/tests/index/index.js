@@ -28,4 +28,6 @@ e.c2p = function(c=[]){
 
 e.p2s = function(p=[]){ return p[0] + p[1] }
 
+e.s2p = function(s=""){ return e.c2p(e.s2c(s)).map(e.p2s) }
+
 })
