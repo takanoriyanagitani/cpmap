@@ -2,6 +2,6 @@ module.exports = {
   testMatch: [
     "**/*_test.js",
   ],
-  textPathIgnorePatterns: ["/node_modules/"],
+  testPathIgnorePatterns: ["/node_modules/"],
   verbose: true,
 }
