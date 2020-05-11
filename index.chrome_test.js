@@ -49,4 +49,11 @@ describe("chrome", () => {
     .then(t=>expect(t == "OK").toBe(true))
   , timeout)
 
+  test("updmap", () => Promise.resolve(state.browser)
+    .then(b=>b.get("https://takanoriyanagitani.github.io/cpmap/docs/tests/index/sss.html"))
+    .then(_=>state.browser)
+    .then(b=>b.getTitle())
+    .then(t=>expect(t == "OK").toBe(true))
+  , timeout)
+
 })

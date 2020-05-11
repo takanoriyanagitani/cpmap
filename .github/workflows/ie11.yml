@@ -18,16 +18,26 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: echo object
+    - name: str2map
       run: |
         $ie = New-Object -ComObject InternetExplorer.Application
         $ie.Navigate("https://takanoriyanagitani.github.io/cpmap/docs/tests/index/s2m.html")
-        $ie
+        $cnt = 64
+        while(-not $ie.LocationName -eq "OK" -and -not $ie.LocationName -eq "NG" -and $cnt -gt 0){ $cnt--; sleep 1 }
+        $ie.LocationName | findstr "^OK$"
 
-    - name: test
+    - name: map2str
       run: |
         $ie = New-Object -ComObject InternetExplorer.Application
-        $ie.Navigate("https://takanoriyanagitani.github.io/cpmap/docs/tests/index/s2m.html")
+        $ie.Navigate("https://takanoriyanagitani.github.io/cpmap/docs/tests/index/m2s.html")
+        $cnt = 64
+        while(-not $ie.LocationName -eq "OK" -and -not $ie.LocationName -eq "NG" -and $cnt -gt 0){ $cnt--; sleep 1 }
+        $ie.LocationName | findstr "^OK$"
+
+    - name: updmap
+      run: |
+        $ie = New-Object -ComObject InternetExplorer.Application
+        $ie.Navigate("https://takanoriyanagitani.github.io/cpmap/docs/tests/index/sss.html")
         $cnt = 64
         while(-not $ie.LocationName -eq "OK" -and -not $ie.LocationName -eq "NG" -and $cnt -gt 0){ $cnt--; sleep 1 }
         $ie.LocationName | findstr "^OK$"
