@@ -72,4 +72,6 @@ e.sss = function(a,b){
   return e.m2s(m)
 }
 
+e.s2s = e.sss
+
 })
