@@ -48,4 +48,10 @@ e.m2p = function(m){
   return p
 }
 
+e.m2s = function(m){
+  const pairs = e.m2p(m)
+  const strs  = pairs.map(function(p){ return p[0]+p[1] })
+  return strs.join("")
+}
+
 })
