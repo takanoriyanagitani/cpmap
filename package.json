@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/takanoriyanagitani/cpmap#readme",
   "devDependencies": {
-    "jest": "^26.0.1"
+    "chromedriver": "^81.0.0",
+    "jest": "^26.0.1",
+    "selenium-webdriver": "^4.0.0-alpha.7"
   }
 }
