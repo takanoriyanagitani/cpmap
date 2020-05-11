@@ -42,4 +42,11 @@ describe("chrome", () => {
     .then(t=>expect(t == "OK").toBe(true))
   , timeout)
 
+  test("map2str", () => Promise.resolve(state.browser)
+    .then(b=>b.get("https://takanoriyanagitani.github.io/cpmap/docs/tests/index/m2s.html"))
+    .then(_=>state.browser)
+    .then(b=>b.getTitle())
+    .then(t=>expect(t == "OK").toBe(true))
+  , timeout)
+
 })
