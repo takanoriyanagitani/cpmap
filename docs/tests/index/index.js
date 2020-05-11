@@ -16,9 +16,9 @@
 
 })(this, function(e){
 
-e.s2c = function(s=""){ return s.split("") }
+e.s2c = function(s){ return s.split("") }
 
-e.c2p = function(c=[]){
+e.c2p = function(c){
   const ret = []
   const len = c.length
   const hlf = len >> 1
@@ -26,11 +26,11 @@ e.c2p = function(c=[]){
   return ret
 }
 
-e.p2s = function(p=[]){ return p[0] + p[1] }
+e.p2s = function(p){ return p[0] + p[1] }
 
-e.s2p = function(s=""){ return e.c2p(e.s2c(s)).map(e.p2s) }
+e.s2p = function(s){ return e.c2p(e.s2c(s)).map(e.p2s) }
 
-e.s2m = function(s=""){
+e.s2m = function(s){
   const c = e.s2c(s)
   const p = e.c2p(c)
   return new Map(p)
