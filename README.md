@@ -6,7 +6,7 @@ map creation from character pairs
 
 * s2m: decoder (String -> Map)
 * m2s: encoder (Map    -> String)
-* sss: update encoded Map
+* s2s: update encoded Map
 
 ### Example
 
