@@ -33,4 +33,11 @@ describe("chrome", () => {
     .then(t=>expect(t == "OK").toBe(true))
   , 16384)
 
+  test("str2map", () => Promise.resolve(state.browser)
+    .then(b=>b.get("https://takanoriyanagitani.github.io/cpmap/docs/tests/index/s2m.html"))
+    .then(_=>state.browser)
+    .then(b=>b.getTitle())
+    .then(t=>expect(t == "OK").toBe(true))
+  , 16384)
+
 })
