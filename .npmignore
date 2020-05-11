@@ -1,2 +1,6 @@
 index_test.js
 jest.config.js
+.github/
+docs
+index.chrome_test.js
+index.html
