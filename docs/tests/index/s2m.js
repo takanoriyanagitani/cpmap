@@ -17,10 +17,9 @@
     switch(a.size){
       case 0:  return 0 === b.size
       default: break
-      })
     }
     let ok = 1
-    a.forEach(function(v,k){ ok &= a.size === b.size && a[k] === b[k] ? 1 : 0 }
+    a.forEach(function(v,k){ ok &= a.size === b.size && a[k] === b[k] ? 1 : 0 })
     switch(ok){
       case 1:  return true
       default: return false
