@@ -54,4 +54,9 @@ e.m2s = function(m){
   return strs.join("")
 }
 
+e.usm = function(s,m){
+  const old = e.s2m(s)
+  return new Map([...old, ...m])
+}
+
 })
