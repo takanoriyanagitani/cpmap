@@ -56,7 +56,15 @@ e.m2s = function(m){
 
 e.usm = function(s,m){
   const old = e.s2m(s)
-  return new Map([...old, ...m])
+  const neo = new Map()
+  old.forEach(function(v,k){ neo.set(k,v) })
+  m.forEach(function(v,k){   neo.set(k,v) })
+  return neo
+}
+
+e.sms = function(s,m){
+  const updated = e.usm(s,m)
+  return e.m2s(updated)
 }
 
 })

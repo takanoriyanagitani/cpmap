@@ -2,7 +2,7 @@ const { Builder } = require("selenium-webdriver")
 
 const c = require("selenium-webdriver/chrome")
 
-const timeout = 32768
+const timeout = 65536
 
 require("chromedriver")
 
