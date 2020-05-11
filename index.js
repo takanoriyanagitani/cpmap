@@ -42,4 +42,10 @@ e.s2m = function(s){
   return m
 }
 
+e.m2p = function(m){
+  const p = []
+  m.forEach(function(v,k){ p.push([k,v]) })
+  return p
+}
+
 })
