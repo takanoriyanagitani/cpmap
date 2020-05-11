@@ -1,6 +1,6 @@
 {
   "name": "cpmap",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "map creation from character pairs",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/takanoriyanagitani/cpmap.git"
   },
-  "keywords": [],
+  "keywords": [
+    "Map",
+    "String",
+    "Character",
+    "IE11",
+    "cpmap"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
