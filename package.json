@@ -1,0 +1,23 @@
+{
+  "name": "cpmap",
+  "version": "0.0.1",
+  "description": "map creation from character pairs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takanoriyanagitani/cpmap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takanoriyanagitani/cpmap/issues"
+  },
+  "homepage": "https://github.com/takanoriyanagitani/cpmap#readme",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
