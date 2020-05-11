@@ -7,3 +7,4 @@ map creation from character pairs
 | Function | Input | Output |
 |:---------|:------|:-------|
 | s2m      | v5i1  | Map({'v'=>'5', 'i'=>'1'}) |
+| m2s      | Map({"3"=>"8", "0"=>"1"}) | 3801 |
