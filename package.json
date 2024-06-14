@@ -27,7 +27,7 @@
   "homepage": "https://github.com/takanoriyanagitani/cpmap#readme",
   "devDependencies": {
     "chromedriver": "^119.0.1",
-    "jest": "^26.0.1",
+    "jest": "^29.7.0",
     "selenium-webdriver": "^4.0.0-alpha.7"
   }
 }
